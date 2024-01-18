@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "3f68d577-3435-4aa9-bb56-1392dd113594",
+		"name": "Ekan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22531846",
+		"_collection_link": "https://dark-star-593998.postman.co/workspace/LTDA~79eef44b-55f7-4347-8b23-ca718d1ff76e/collection/22531846-3f68d577-3435-4aa9-bb56-1392dd113594?action=share&source=collection_link&creator=22531846"
+	},
+	"item": [
+		{
+			"name": "Novo Beneficiario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\":\"Leonardo Stanchak\",\r\n    \"telefone\":\"11 996422659\",\r\n    \"dto\":{\r\n        \"tipoDeDocumento\":\"cpf\",\r\n        \"descricao\":\"cpf do cliente\",\r\n        \"dataInclusao\":\"2022-01-18T12:34:56.789Z\",\r\n        \"dataAtualizacao\":\"2022-01-18T12:34:56.789Z\"\r\n    },\r\n    \"dataNascimento\":\"2022-01-18T12:34:56.789Z\",\r\n    \"dataInclusao\":\"2022-01-18T12:34:56.789Z\",\r\n    \"dataAtualizacao\":\"2022-01-18T12:34:56.789Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/ekan/novo_beneficiario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"ekan",
+						"novo_beneficiario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualiza ficha cadastral",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\":\"Leonardo Stanchak\",\r\n    \"telefone\":\"11 995924079\",\r\n    \"dto\":{\r\n        \"tipoDeDocumento\":\"cpf\",\r\n        \"descricao\":\"cpf do cliente\",\r\n        \"dataInclusao\":\"2022-01-18T12:34:56.789Z\",\r\n        \"dataAtualizacao\":\"2023-01-18T12:34:56.789Z\"\r\n    },\r\n    \"dataNascimento\":\"2022-01-18T12:34:56.789Z\",\r\n    \"dataInclusao\":\"2022-01-18T12:34:56.789Z\",\r\n    \"dataAtualizacao\":\"2022-01-18T12:34:56.789Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/ekan/atualizando_benificiario/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"ekan",
+						"atualizando_benificiario",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Busca todos os beneficiarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/ekan/beneficiarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"ekan",
+						"beneficiarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Busca todos os docuentos do beneficiairo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/ekan/1/documentos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"ekan",
+						"1",
+						"documentos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deleta o beneficiario junto com seus documentos da base de dados",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/ekan/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"ekan",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
